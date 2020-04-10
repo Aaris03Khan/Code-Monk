@@ -1,0 +1,84 @@
+//Zoo Problem - basic-programming
+#include <iostream>
+using namespace std;
+int main(){
+    string s;
+    int count = 0, check = 0;
+    cin >> s;
+    for(int i=0; i<s.length();i++)
+    {
+        if(s[i]=='z')
+        {
+            count++;
+        }
+        else
+        {
+            check++;
+        }
+    }
+    if((2*count)==check)
+    {
+        cout << "Yes"<<endl;
+    }
+    else
+    {
+        cout<<"No"<<endl;
+    }
+}
+
+
+
+//Monk and Welcome Problem -Arrays
+#include <iostream>
+using namespace std;
+int main()
+{
+    int s;
+    cin >> s;
+    int x[s];
+    int y[s];
+    for(int i=0; i<s; i++)
+    {
+        cin >> x[i];
+    }
+    for(int i=0; i<s; i++)
+    {
+        cin >> y[i];
+    }
+    for(int i=0; i<s; i++)
+    {
+        cout <<x[i]+y[i]<<" ";
+    }
+}
+
+
+//Monk Teaches Palindrome
+#include <iostream>
+using namespace std;
+int main()
+{
+    int s;
+    cin >> s;
+    string p[s];
+    int length[s];
+    for (int i=0;i<s;i++)
+    {
+        cin >> p[i];
+        length[i] = p[i].size();
+    }
+    for (int i=0;i<s;i++)
+    {
+        if ( p[i] == string(p[i].rbegin(), p[i].rend()) && length[i]%2==0)
+        {
+            cout << "YES EVEN" << endl;
+        }
+        else if( p[i] == string(p[i].rbegin(), p[i].rend()) )
+        {
+            cout << "YES ODD" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
+    }
+}
